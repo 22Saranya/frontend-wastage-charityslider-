@@ -1,0 +1,28 @@
+<div *ngIf="role == 'restaurant'">
+  <div class="w3-display-container w3-green" style="height:800px;">
+    <img src="../../assets/video/ezgif.com-video-to-gif.gif" height="100%" width="100%"/>
+    <div class="w3-display-middle w3-center">
+      <span class="hd">Welcome to CCD</span>
+      <h5 id="border"></h5>
+      <h5 class="hdSub" >Our restaurant offers full-service dining with breathtaking views seen from our indoor covered
+         patio and our outdoor sundeck.</h5>
+    </div>
+    <div class="w3-display-bottommiddle">
+        <app-availabilityform></app-availabilityform>
+    </div>
+  </div>
+  <!-- Optional: some overlay text to describe the video -->
+  <section class="content" id="logs">    
+      <div class="container">
+        <app-restaurant-logs></app-restaurant-logs>
+      </div>
+  </section>
+</div>
+
+<div *ngIf="role == 'charity'">
+  <app-charity-dash-board></app-charity-dash-board>
+</div>
+
+<div *ngIf="role == 'deliveryBoy'">
+  <app-delivery-boy-dash-board></app-delivery-boy-dash-board>
+</div>

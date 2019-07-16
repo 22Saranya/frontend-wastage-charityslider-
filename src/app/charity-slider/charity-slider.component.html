@@ -1,0 +1,141 @@
+<!-- <h1> Just Like that trial...</h1>
+<div class="container" *ngFor = "let data of allCharity">
+
+  <h6> {{data[0].charity_name}}</h6>
+  <h6> {{data[0].address}}</h6>
+  <h6> {{data[0].phonenumber}}</h6>
+
+
+</div> -->
+
+
+
+<div class="w3-padding-64 parallax1">
+<h1 class="w3-center "><b><span class="w3-text-yellow">Char</span><span class="w3-text-white">ity</span></b></h1>
+<br><br>
+<div id="demo1" class="carousel slide" data-ride="carousel">
+
+
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-6 w3-center w3-padding"  *ngFor="let item of allCharity">
+            <div class="w3-card-4 w3-white">
+                <!-- (click)="openView(item)" src="{{item.thumb}}" -->
+              <img src={{item.img_url}} (click)="charityDetails(item)"  width="100%" style="max-height:180px" alt="checking">
+              <!-- <img (click)="assets/img/img2.jpg" src="{{item.img_url}}" width="100%" style="max-height:180px" alt="checking"> -->
+              <div class="w3-container w3-padding">
+                 <label><b style="font-size: 14px" >{{item.charity_name}}</b></label>
+              </div>  
+            </div>
+          </div>
+
+           <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-6 w3-center w3-padding">
+            <div class="w3-card-4 w3-white">
+              <img src={{charity2.img_url}} (click)="charityDetails(item)" width="100%" style="max-height:180px">
+              <div class="w3-container w3-pitem adding">
+                  <label><b style="font-size: 14px" >{{charity2.charity_name}}</b></label>
+               </div>
+            </div>
+          </div>  -->
+
+          <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-6 w3-center  w3-padding" >
+            <div class="w3-card-4 w3-white">
+              <img src={{charity3.img_url}} (click)="charityDetails(item)" width="100%" style="max-height:180px">
+              <div class="w3-container w  this.charityseedslider.charityDetails(charitydet);
+              3-padding">
+                  <label><b style="font-size: 14px" >{{charity3.charity_name}}</b></label>
+               </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-6 w3-center  w3-padding" >
+            <div class="w3-card-4 w3-white">
+              <img src={{charity4.img_url}} (click)="charityDetails(item)" width="100%" style="max-height:180px">
+              <div class="w3-container w3-padding">
+                  <label><b style="font-size: 14px" >{{charity4.charity_name}}</b></label>
+               </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-6 w3-center  w3-padding"  *ngFor="let item of allCharity">
+            <div class="w3-card-4 w3-white">
+              <img src={{item.img_url}} (click)="charityDetails(item)"width="100%" style="max-height:180px">
+              <div class="w3-container w3-padding">
+                  <label><b style="font-size: 14px" >{{item.charity_name}}</b></label>
+               </div>
+            </div>
+          </div>
+          <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-6 w3-center  w3-padding" >
+            <div class="w3-card-4 w3-white">
+              <img src={{charity6.img_url}} (click)="charityDetails(item)" width="100%" style="max-height:180px">
+              <div class="w3-container w3-padding">
+                  <label><b style="font-size: 14px" >{{charity6.charity_name}}</b></label>
+               </div>
+            </div>
+          </div> -->
+          <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-6 w3-center  w3-padding" >
+            <div class="w3-card-4 w3-white">
+              <img src={{charity7.img_url}} (click)="charityDetails(item)" width="100%" style="max-height:180px">
+              <div class="w3-container w3-padding">
+                  <label><b style="font-size: 14px" >{{charity7.charity_name}}</b></label>
+               </div>
+            </div>
+          </div> -->
+          
+           <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-6 w3-center  w3-padding" >
+            <div class="w3-card-4 w3-white">
+              <img src={{charity8.img_url}} (click)="charityDetails(item)" width="100%" style="max-height:180px">
+              <div class="w3-container w3-padding">
+                  <label><b style="font-size: 14px" >{{charity8.charity_name}}</b></label>
+               </div>
+            </div>
+          </div>   -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+    <i class="fas fa-chevron-left w3-text-gray w3-xxlarge"></i>
+  </a>
+  <a class="carousel-control-next" href="#demo1" data-slide="next">
+    <i class="fas fa-chevron-right w3-text-gray w3-xxlarge"></i>
+  </a>
+</div>
+</div>
+
+
+<div class="w3-modal" id="viewCharity"  >
+  <div class="w3-modal-content" style="margin-top:200px">
+    <h5 class="w3-black w3-padding" > <h5 id="CharityName" ></h5><span (click)="closeView()" class="w3-text-white close w3-right"style="margin-top:10px;position:absolute;top:5px;right:20px;" >&times;</span></h5>
+    <div class="w3-container w3-padding">
+      <div class="row">
+        <div classs="col-md-6 w3-padding">
+          <img width="220px" height="200px" src="{{restImgPath}}" id="restImg"/>
+        </div>
+        <div classs="col-md-6 w3-padding">
+          <!-- <h3 id="CharityName" ></h3> -->
+          <!-- <p style = "font-family:georgia,garamond,serif;font-size:24px;"><label id="CharityName">CharityName:</label></p> -->
+          <h5 id="CharityAddress" ></h5>
+          <p style = "font-family:georgia,garamond,serif;font-size:24px;"><label id="CharityAddress">CharityAddress:</label></p>
+          <h6 id="PhoneNumber" ></h6>
+          <p style = "font-family:georgia,garamond,serif;font-size:24px;"><label id="PhoneNumber">Contact Number</label></p>
+         
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
